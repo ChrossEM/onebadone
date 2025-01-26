@@ -23,3 +23,5 @@ c:\Users\chris\Documents\Workspaces\mg_repos\onebadone\onebadone\obj\Debug\net8.
 c:\Users\chris\Documents\Workspaces\mg_repos\onebadone\onebadone\obj\Debug\net8.0\onebadone.pdb
 c:\Users\chris\Documents\Workspaces\mg_repos\onebadone\onebadone\obj\Debug\net8.0\onebadone.genruntimeconfig.cache
 c:\Users\chris\Documents\Workspaces\mg_repos\onebadone\onebadone\obj\Debug\net8.0\ref\onebadone.dll
+c:\Users\chris\Documents\Workspaces\mg_repos\onebadone\onebadone\obj\Debug\net8.0\onebadone.sourcelink.json
+c:\Users\chris\Documents\Workspaces\mg_repos\onebadone\onebadone\bin\Debug\net8.0\Content\bolas.xnb

@@ -6,8 +6,11 @@ namespace onebadone;
 
 public class Game1 : Game
 {
+    Texture2D bolaTexture;
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+
+    
 
     public Game1()
     {
@@ -28,6 +31,8 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+
+        bolaTexture = Content.Load<Texture2D>("bolas");
     }
 
     protected override void Update(GameTime gameTime)
@@ -45,6 +50,10 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
+
+        _spriteBatch.Begin();
+        _spriteBatch.Draw(bolaTexture, new Vector2(0,0), Color.White);
+        _spriteBatch.End();
 
         base.Draw(gameTime);
     }
