@@ -7,8 +7,12 @@ namespace onebadone;
 public class Game1 : Game
 {
     Texture2D bolaTexture;
+    Vector2 bolaPosition;
+    float bolaSpeed;
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+
+   
 
     
 
@@ -22,10 +26,13 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        bolaPosition = new Vector2(_graphics.PreferredBackBufferWidth /2 
+                                    ,_graphics.PreferredBackBufferHeight/2);
 
-        base.Initialize();
+        bolaSpeed = 100f;
+        
+        base.Initialize();                       
     }
-
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -37,11 +44,31 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+            Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+        
+
 
         // TODO: Add your update logic here
+        
+        //time since u was called last
+            float updateBolaSpeed = bolaSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            var kstate = Keyboard.GetState();
 
+            if(kstate.IsKeyDown(Keys.Up)){
+                bolaPosition.Y -= updateBolaSpeed;
+            }
+            if(kstate.IsKeyDown(Keys.Right)){
+                bolaPosition.X += updateBolaSpeed;
+            }
+            if(kstate.IsKeyDown(Keys.Down)){
+                bolaPosition.Y += updateBolaSpeed;
+            }
+            if(kstate.IsKeyDown(Keys.Left)){
+                bolaPosition.X -= updateBolaSpeed;
+            }
+        //end
         base.Update(gameTime);
     }
 
@@ -52,7 +79,15 @@ public class Game1 : Game
         // TODO: Add your drawing code here
 
         _spriteBatch.Begin();
-        _spriteBatch.Draw(bolaTexture, new Vector2(0,0), Color.White);
+        _spriteBatch.Draw(bolaTexture,
+                        bolaPosition ,
+                        null,
+                        Color.White,
+                        0f,
+                        new Vector2(bolaTexture.Width / 2, bolaTexture.Height/2),
+                        Vector2.One,
+                        SpriteEffects.None,
+                        0f);
         _spriteBatch.End();
 
         base.Draw(gameTime);

@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>c:/Users/chris/Documents/Workspaces/mg_repos/onebadone/onebadone/Content/bolas.png</File>
+    <File>C:/Users/chris/Documents/Workspaces/mg_repos/onebadone/onebadone/Content/bolas.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

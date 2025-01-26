@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("onebadone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef84e823ecaeb17b97e6ec44f895bdfd54931706")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2789791bc3b25d0f6e174a98a575f682062932a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("onebadone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("onebadone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
